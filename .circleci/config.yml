@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: git clone https://github.com/XSans02/CI_Script .
       - run: cd ./tulip
-      - run: bash build.sh
+      - run: bash build.sh stable
