@@ -4,6 +4,5 @@ jobs:
     docker:
       - image: xyzuan/xdocker:latest
     steps:
-      - run: git clone https://github.com/XSans02/CI_Script .
-      - run: cd ./tulip
-      - run: bash build.sh stable
+      - run: https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip_test/doBuild
+      - run: bash doBuild stable
