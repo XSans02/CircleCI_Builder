@@ -2,7 +2,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: xyzuan/xdocker:latest
+      - image: okta10/docker:ubuntu
     steps:
-      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip_test/doBuild
-      - run: bash doBuild stable
+      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip2/doStart
+      - run: bash doStart beta clang
+      - run: cd kernel
+      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip2/doPush
+      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip2/doBuild
+      - run: bash doBuild tulip oldcam clang
+      - run: bash doBuild tulip newcam clang
+      - run: bash doPush clang
