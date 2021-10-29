@@ -5,4 +5,4 @@ jobs:
       - image: okta10/docker:ubuntu
     steps:
       - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip3/doBuild
-      - run: bash doBuild beta oldcam clang
+      - run: bash doBuild beta oldcam oc clang
