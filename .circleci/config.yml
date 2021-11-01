@@ -4,5 +4,6 @@ jobs:
     docker:
       - image: okta10/docker:ubuntu
     steps:
-      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip2/doBuild
-      - run: bash doBuild stable oldcam clang
+      - run: git clone --depth=1 https://github.com/XSans02/kernel_sdm660.git -b eas-test kernel
+      - run: cd kernel
+      - run: bash build oldcam
