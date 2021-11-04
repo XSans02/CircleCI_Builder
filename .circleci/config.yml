@@ -4,6 +4,6 @@ jobs:
     docker:
       - image: okta10/docker:ubuntu
     steps:
-      - run: git clone --depth=1 https://github.com/XSans02/kernel_sdm660.git -b eas-test kernel
+      - run: git clone --depth=1 https://github.com/XSans02/halcyon_kernel_xiaomi_sdm660 -b eas-12-bpf kernel
       - run: cd kernel
       - run: bash build oldcam
