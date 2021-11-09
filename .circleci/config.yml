@@ -2,9 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ubuntu:latest
+      - image: okta10/docker:ubuntu
     steps:
-      - run: apt upgrade
-      - run: apt install wget git
       - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip2/doBuild
       - run: bash doBuild beta oldcam clang
