@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: ubuntu:latest
     steps:
+      - run: apt upgrade
       - run: apt install wget git
       - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/tulip2/doBuild
       - run: bash doBuild beta oldcam clang
