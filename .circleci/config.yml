@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: okta10/docker:ubuntu
+      - image: XSans02/docker:ubuntu
     steps:
-      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
-      - run: bash doBuild stable clang
+      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/startBuild
+      - run: bash startBuild stable clang
