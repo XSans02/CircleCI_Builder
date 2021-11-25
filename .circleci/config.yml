@@ -5,4 +5,4 @@ jobs:
       - image: zycromerz/kerneldocker:v2
     steps:
       - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
-      - run: bash doBuild beta proton
+      - run: bash doBuild beta nad14
