@@ -4,5 +4,5 @@ jobs:
     docker:
       - image: zycromerz/kerneldocker:v3
     steps:
-      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/startBuild
-      - run: bash startBuild beta proton
+      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
+      - run: bash doBuild beta clang-llvm
