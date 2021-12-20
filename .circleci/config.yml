@@ -1,9 +1,16 @@
 version: 2.1
 jobs:
-  no_output_timeout: 6h
-  build:
-    docker:
+  compile:
+   docker:
       - image: zycromerz/kerneldocker:v3
-    steps: 
-      - run: wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
-      - run: bash doBuild beta clang14-llvm
+   steps:
+      - run:
+          command: |
+            wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
+            bash doBuild beta clang14-llvm
+          no_output_timeout : 5h
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile
