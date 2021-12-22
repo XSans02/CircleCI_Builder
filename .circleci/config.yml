@@ -7,7 +7,7 @@ jobs:
       - run:
           command: |
             wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
-            bash doBuild stable clang14-llvm
+            bash doBuild beta clang14-llvm
           no_output_timeout : 5h
 workflows:
   version: 2.1
